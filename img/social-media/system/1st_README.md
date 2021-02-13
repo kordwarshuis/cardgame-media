@@ -1,38 +1,36 @@
-This directory contains the cartoons and illustrations made by our cartoonists Pratibha, Kyle and Daniele.
+Be aware that replacing an image means that the various Social Media images need to be refreshed in the caches of Twitter, Facebook, etc. Only then will the new image be visible.
 
-### Images directory
-Structure:
-```{unique-url-tail}-text-{id}.jpg```
+See instruction {elsewhere Soc Media Refresh instruction}.
 
-Example:
-```{unique-url-tail}-text-Daniele.jpg```
+### System directory (plus backup)
+For every misconception we have at least three files: 
 
-The next step is first time use. We generate an image for the directory System: ```{unique-url-tail}-text-bckgrd.jpg``` and this file will be copied to _current_ right away ```{unique-url-tail}.jpg```
+```{unique-url-tail}.jpg```
+```{unique-url-tail}-text.jpg```
+```{unique-url-tail}-text-bckgrd.jpg```
 
-When one or more of cartoonist have delivered their work we add to the directory Images:
-```{unique-url-tail}-text-{First name}.jpg, example criminals-text-Daniele.jpg```
+For example
+```
+money-laundering.jpg    Current 
+money-laundering-text.jpg   Current
+money-laundering-text-bckgrd.jpg Contains with text of misco in the image
+```
+
+```{unique-url-tail}.jpg```
 and
-```{unique-url-tail}-{First name}.jpg, example criminals-Daniele.jpg```
+```{unique-url-tail}-text.jpg```
 
-To make any illustration for a card the _current_ image:
-- We COPY {unique-url-tail}-text-{First name}.jpg to {unique-url-tail}-text.jpg REPLACING the existing file
-- DO NOT RENAME the file, for the image will be lost when the next refresh action takes places.
 
-###### The parent directory contains
-- bitcoin-standard-bckgrd.jpg Our engine uses this image the send when the following `card-urls` are being used:
-https://blockchainbird.com/t/btc{/category}
-- blockchain-standard-bckgrd.jpg Our engine uses this image the send when the following card-urls are being used:https://blockchainbird.com/t/bcb{/category}
-- ssi-standard-bckgrd.jpg Our engine uses this image the send when the following card-urls are being used: https://blockchainbird.com/t/id{/category}
+The first is used by the cardgame system for twitter. The tweet text contains the message with the misconception; the image will support this message.\
+The latter is for stand-alone use, and contains the text of the misconception burnt into the image. Two question marks (questioning the validity of the statement) will be added, so the image becomes self-explanatory as a whole.
 
-+++ FREE TO USE!! +++
+#### Process automation
 
-You can use these images under the Creative Commons licence CC v4.0, https://creativecommons.org/licenses/by/4.0/
-
-Feel free to use these images under the Creative Commons licence CC v4.0, https://creativecommons.org/licenses/by/4.0/
-We will keep their names and directory live and fixed for years to come. If we change locations, we will provide symbolic links of 403 references.
-
-So
-```https://blockchainbird.com/t/media/img/social-media/cards2/hacked.jpg ```
-and
-```https://blockchainbird.com/images/hacked.jpg```
-will both work als a link to copy paste.
+Create a placeholder imagefile with the text of the new misconception burnt into the image. This file is called ```money-laundering-text-bckgrd.jpg```.\
+We start with a placeholder file called 'bckgrd' for **Current**, that contains a logo and *the text of the misconception* for the time being that there is no illustration available. This file is ```{unique-url-tail}-text.jpg```.\
+Because we also need an image to be able to print to text of the misconception runtime above the image we do the following:
+ - Copy the root-image of this cardstack (e.g. Bitcoin) into ```{unique-url-tail}.jpg```
+ - Check that there are exactly three files in the system directory per card:
+     1. money-laundering.jpg    Current 
+     2. money-laundering-text.jpg   Current
+     3. money-laundering-text-bckgrd.jpg Contains with text of misco in the image
