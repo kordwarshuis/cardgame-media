@@ -36,33 +36,31 @@
     <h1>Cartoons</h1>
     <h2>FREE TO USE!!</h2>
     <img class="logo" src="../../logo/cropped-header_bcb.png" alt="Blockchain Bird logo, a blue blocky bird">
-    <p>You can use these images under the Creative Commons licence CC v4.0, https://creativecommons.org/licenses/by/4.0/
-    </p>
+    <p>You can use these images under the Creative Commons licence CC v4.0, https://creativecommons.org/licenses/by/4.0/</p>
 
     <?php
-        function is_image($path)
-        {
-            $a = getimagesize($path);
-            $image_type = $a[2];
-            
-            if(in_array($image_type , array(IMAGETYPE_GIF , IMAGETYPE_JPEG ,IMAGETYPE_PNG , IMAGETYPE_BMP)))
-            {
-                return true;
-            }
-            return false;
-        }
+function is_image($path)
+{
+    $a = getimagesize($path);
+    $image_type = $a[2];
 
-        $dir = new DirectoryIterator(".");
-        foreach ($dir as $fileinfo) {
-            if (!$fileinfo->isDot()) {
-                if (is_image($fileinfo->getFilename())) {
-                    echo "<div>";
-                    echo "<img src='".($fileinfo->getFilename())."' alt='' />";
-                    echo "<textarea rows='3' cols='50' onclick='this.focus();this.select()' readonly='readonly'>https://blockchainbird.com/t/media/img/social-media/cards/".$fileinfo->getFilename()."</textarea>";
-                    echo "</div>";        
-                }
-            }
+    if (in_array($image_type, array(IMAGETYPE_GIF, IMAGETYPE_JPEG, IMAGETYPE_PNG, IMAGETYPE_BMP))) {
+        return true;
+    }
+    return false;
+}
+
+$dir = new DirectoryIterator(".");
+foreach ($dir as $fileinfo) {
+    if (!$fileinfo->isDot()) {
+        if (is_image($fileinfo->getFilename())) {
+            echo "<div>";
+            echo "<img src='" . ($fileinfo->getFilename()) . "' alt='' />";
+            echo "<textarea rows='3' cols='50' onclick='this.focus();this.select()' readonly='readonly'>https://blockchainbird.com/t/media/img/social-media/cards/" . $fileinfo->getFilename() . "</textarea>";
+            echo "</div>";
         }
+    }
+}
 ?>
 </body>
 </html>
