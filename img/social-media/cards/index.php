@@ -56,7 +56,7 @@ foreach ($dir as $fileinfo) {
         if (is_image($fileinfo->getFilename())) {
             echo "<div>";
             echo "<img src='" . ($fileinfo->getFilename()) . "' alt='' />";
-            echo "<textarea rows='3' cols='50' onclick='this.focus();this.select()' readonly='readonly'>https://blockchainbird.com/t/media/img/social-media/cards/" . $fileinfo->getFilename() . "</textarea>";
+            echo "<textarea rows='3' cols='50' onclick='this.focus();this.select()' readonly='readonly'>https://blockchainbird.org/t/media/img/social-media/cards/" . $fileinfo->getFilename() . "</textarea>";
             echo "</div>";
         }
     }

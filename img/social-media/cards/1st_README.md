@@ -20,9 +20,9 @@ To make any illustration for a card the _current_ image:
 
 ###### The parent directory contains
 - bitcoin-standard-bckgrd.jpg Our engine uses this image the send when the following `card-urls` are being used:
-https://blockchainbird.com/t/btc{/category}
-- blockchain-standard-bckgrd.jpg Our engine uses this image the send when the following card-urls are being used:https://blockchainbird.com/t/bcb{/category}
-- ssi-standard-bckgrd.jpg Our engine uses this image the send when the following card-urls are being used: https://blockchainbird.com/t/id{/category}
+https://blockchainbird.org/t/btc{/category}
+- blockchain-standard-bckgrd.jpg Our engine uses this image the send when the following card-urls are being used:https://blockchainbird.org/t/bcb{/category}
+- ssi-standard-bckgrd.jpg Our engine uses this image the send when the following card-urls are being used: https://blockchainbird.org/t/id{/category}
 
 +++ FREE TO USE!! +++
 
@@ -32,7 +32,7 @@ Feel free to use these images under the Creative Commons licence CC v4.0, https:
 We will keep their names and directory live and fixed for years to come. If we change locations, we will provide symbolic links of 403 references.
 
 So
-```https://blockchainbird.com/t/media/img/social-media/cards2/hacked.jpg ```
+```https://blockchainbird.org/t/media/img/social-media/cards2/hacked.jpg ```
 and
-```https://blockchainbird.com/images/hacked.jpg```
+```https://blockchainbird.org/images/hacked.jpg```
 will both work als a link to copy paste.
