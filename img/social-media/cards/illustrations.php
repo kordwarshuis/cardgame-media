@@ -18,11 +18,16 @@ $dir = new DirectoryIterator(".");
 foreach ($dir as $fileinfo) {
     if (!$fileinfo->isDot()) {
         if (is_image($fileinfo->getFilename())) {
-            array_push($data, $url.$fileinfo->getFilename());
+            if (strpos($fileinfo->getFilename(), '-text') !== false) {// only if it contains the string '-text'
+                array_push($data, $url.$fileinfo->getFilename());
+            }
+
         }
     }
 }
 
+$selection = array_slice($data, 0, 5);
+
 header("Access-Control-Allow-Origin: *");
 header('Content-Type: application/text');
-echo json_encode(array_values($data));
+echo json_encode(array_values($selection));
