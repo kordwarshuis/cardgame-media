@@ -25,7 +25,7 @@ foreach ($dir as $fileinfo) {
         }
     }
 }
-
+//TODO: ad shuffle
 $selection = array_slice($data, 0, 5);
 
 header("Access-Control-Allow-Origin: *");
